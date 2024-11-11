@@ -1,0 +1,39 @@
+header{
+    width: 100%;
+    background-color: #f1701a;
+}
+section{
+    width: 100%;
+    background-color: #ffffff;
+}
+.contentMax{
+    box-sizing: border-box;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.headerFrame{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.logo{
+    width: 100px;
+}
+.hMenue{
+    width: 50px;
+}
+.dishesFrame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contentField{
+    display: flex;
+    justify-content: flex-start;
+    background-color: bisque;
+    padding-left: 50px;
+}
