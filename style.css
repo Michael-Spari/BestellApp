@@ -1,10 +1,24 @@
 header{
     width: 100%;
+    height: 60px;
     background-color: #f1701a;
+}
+.headerImg{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 section{
     width: 100%;
     background-color: #ffffff;
+}
+hr {
+    border: 0;
+    height: 2px;
+    width: 100%;
+    background: #127799;
+    margin-top: 20px 0;
 }
 .contentMax{
     box-sizing: border-box;
@@ -22,18 +36,56 @@ section{
 }
 .logo{
     width: 100px;
+    padding-left: 10px;
 }
 .hMenue{
     width: 50px;
+    padding-right: 10px;
 }
-.dishesFrame{
+.formatFrame{
     display: flex;
-    justify-content: center;
-    align-items: center;
+}
+#dishesFrame{
+    width: calc(100% - 300px);
 }
 .contentField{
     display: flex;
     justify-content: flex-start;
     background-color: bisque;
     padding-left: 50px;
+}
+.basketFrame{
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    flex-grow: 1;
+    padding-top: 10px;
+    background-color: #f1701a;
+}
+.basket{
+    background-color: rgb(252, 233, 210);
+    /* border: #f1701a 1px solid; */
+    border-radius: 10px;
+    width: 85%;
+    height: 400px;
+    position: sticky;
+    top: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.dishesField{
+    background-color: rgb(252, 233, 210);
+    /* border: #f1701a 1px solid; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    width: 90%;
+}
+footer{
+    width: 100%;
+    background-color: #f1701a;
 }
