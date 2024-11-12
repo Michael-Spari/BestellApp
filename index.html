@@ -13,7 +13,7 @@
     <script src="./scripts/template.js"></script>
     <script src="./script.js"></script>
 </head>
-<body onload="renderDishes()">
+<body onload="init()">
     <header>
     <div class="contentMax">
             <div class="headerFrame">
@@ -27,7 +27,20 @@
             <img class="headerImg" src="./assets/img/bgizza.jpg">
             <div class="formatFrame">              
                 <div id="dishesFrame"></div>
-                <div class="basketFrame"><div class="basket"><hr><b>Warenkorb</b><hr></div></div>
+                <div class="basketFrame">
+                    <div class="basket"><hr><b>Warenkorb</b><hr>
+                        <div id="basketRows"></div>
+                        <hr>
+                        <div class="basketTotal">
+                            <div class="basketSubtotalText">Zwischensumme:</div>
+                              <div id="basketSubtotalPrice"></div>
+                                <div id="deliveryCosts">zzgl. Lieferkosten: 2,50 €</div>
+                                  <div id="deliveryCostsPrice"></div>
+                                    <div class="basketTotalText"><b>Gesamt:</b></div>
+                                      <div id="basketTotalPrice"></div>
+                        </div>
+                    </div>
+                </div>
             </div> 
         </div>
     </section>

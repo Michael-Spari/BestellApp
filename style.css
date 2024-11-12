@@ -64,7 +64,9 @@ hr {
 }
 .basket{
     background-color: rgb(252, 233, 210);
-    /* border: #f1701a 1px solid; */
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #f1701a #ffffff;
     border-radius: 10px;
     width: 85%;
     height: 400px;
@@ -76,6 +78,10 @@ hr {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .dishesField{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
     background-color: rgb(252, 233, 210);
     /* border: #f1701a 1px solid; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -84,6 +90,20 @@ hr {
     margin-bottom: 20px;
     padding: 15px;
     width: 90%;
+}
+.descriptionField{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 10px;
+}
+.imageField img{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 footer{
     width: 100%;

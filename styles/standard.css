@@ -5,3 +5,37 @@ body {
     margin: 0;
     padding: 0;
 }
+.buttonField{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-top: 20px;
+    height: 100%;
+    width: 40%;
+}
+.addIcon{
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+.addIcon:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px #f1701a;
+    border: 1px solid #f1701a;
+}
+.removeIcon{
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+.removeIcon:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px #f1701a;
+    border: 1px solid #f1701a;
+}
