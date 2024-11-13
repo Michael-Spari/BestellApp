@@ -5,6 +5,18 @@ body {
     margin: 0;
     padding: 0;
 }
+.contentMax{
+    box-sizing: border-box;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.displayFlexColumn{
+    display: flex;
+    flex-direction: column;
+}
 .buttonField{
     display: flex;
     justify-content: flex-end;
@@ -35,6 +47,19 @@ body {
     border-radius: 5px;
 }
 .removeIcon:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px #f1701a;
+    border: 1px solid #f1701a;
+}
+.clearIcon{
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+.clearIcon:hover{
     cursor: pointer;
     box-shadow: 0 0 10px #f1701a;
     border: 1px solid #f1701a;

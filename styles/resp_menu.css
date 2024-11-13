@@ -1,0 +1,20 @@
+.resp_menu_box {
+    background-color: #f1701a;
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    align-items: flex-start;
+    top:0;
+    right:0;
+    width: 200px;
+    height: 400px;
+    transition: all 250ms ease-in-out;
+    filter: drop-shadow(-3px 3px 5px rgb(37, 37, 37));
+}
+.resp_menu_box a{
+    margin: 10px;
+    color: white;
+}
+.resp_menu_close {
+    transform: translateX(105%);
+}

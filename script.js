@@ -6,30 +6,15 @@ function init() {
 function renderDishes() {
   const dishesFrame = document.getElementById('dishesFrame');
   dishesFrame.innerHTML = "";
-  for (let index = 0; index < dishes.length; index++) {
+  for (let index = 0; index < 4; index++) {
     const dish = dishes[index];
     dishesFrame.innerHTML += dishesTemplate(dish);
   }
 }
 
-function dishesTemplate(dish) {
-  return `
-      <div class="contentField">
-          <div class="dishesField">
-            <div class="imageField"><img src="${dish.image}" alt="${dish.name}" /></div>
-            <div class="descriptionField"><h2>${dish.name}</h2><p>${dish.description}</p></div>
-                <p>${dish.price.toFixed(2).replace('.', ',')} €</p>
-                <div class="buttonField">
-                  <img onclick="removeDish(${dish.id})" class="removeIcon" src="./assets/icons/button_remove.jpg">
-                  <img onclick="addDish(${dish.id})" class="addIcon" src="./assets/icons/button_add.jpg">
-                </div>
-          </div>
-      </div>`;
-}
-
 function addDish(id) {
   // Sucht das Gericht mit der ID
-  let dish = null;
+  let dish = 0;
   for (let i = 0; i < dishes.length; i++) {
     if (dishes[i].id === id) {
       dish = dishes[i];
@@ -60,22 +45,9 @@ function addDish(id) {
   }
 }
 
-function basketRowsTemplate(dish) {
-  return `
-  <div class="basketRow" id="row-${dish.id}">
-    <div>${dish.name}</div>
-      <div id="amount-${dish.id}">${dish.amount}</div>
-        <div id="price-${dish.id}">${(dish.amount * dish.price).toFixed(2).replace('.', ',')} €</div>
-          <div class="buttonField">
-              <img onclick="removeDish(${dish.id})" class="removeIcon" src="./assets/icons/button_remove.jpg">
-              <img onclick="addDish(${dish.id})" class="addIcon" src="./assets/icons/button_add.jpg">
-          </div>
-  </div>`;
-}
-
 function removeDish(id) {
   // Sucht das Gericht mit der ID
-  let dish = null;
+  let dish = 0;
   for (let i = 0; i < dishes.length; i++) {
     if (dishes[i].id === id) {
       dish = dishes[i];
@@ -107,7 +79,28 @@ function removeDish(id) {
   }
 }
 
-//zwischensumme in id="basketSubtotalPrice" und gesamtpreis in id="basketTotalPrice" anzeigen
+function clearBasket(id) {
+  // Sucht das Gericht mit der ID
+  let dish = 0;
+  for (let i = 0; i < dishes.length; i++) {
+    if (dishes[i].id === id) {
+      dish = dishes[i];
+      break;
+    }
+  }
+
+  // Falls Gericht gefunden wurde, Menge auf 0 setzen
+  if (dish) {
+    dish.amount = 0;
+    renderBasket();
+    const basketRow = document.getElementById(`row-${id}`);
+    if (basketRow) {
+      basketRow.remove();
+    }
+  }
+}
+
+//zwischensumme in id="basketSubtotalPrice" und Gesamtpreis in id="basketTotalPrice" anzeigen
 
 function basketSubtotalPrice() {
   let subtotalPrice = 0;
