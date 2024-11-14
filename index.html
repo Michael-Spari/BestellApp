@@ -20,42 +20,41 @@
     <script src="./jsons/drinks.js"></script>
     <script src="./scripts/resp_menu.js"></script>
     <script src="./scripts/template.js"></script>
-    <script src="./scripts/renderDishes.js"></script>
+    <script src="./scripts/renderDishesNavi.js"></script>
     <script src="./script.js"></script>
 </head>
 <body onload="init()">
-    <header>
-    <div class="contentMax">
-            <div class="headerFrame">
-                <img class="logo" src="./assets/icons/Logo.png">
-                <a href="#" onclick="toggleRespMenu()"><img class="hMenue" src="./assets/icons/hMenue.png"></a>
-            </div>
+<header>
+<div class="contentMax">
+        <div class="headerFrame">
+            <img class="logo" src="./assets/icons/Logo.png">
+            <a href="#" onclick="toggleRespMenu()"><img class="hMenue" src="./assets/icons/hMenue.png"></a>
         </div>
+    </div>
 
-        <div id="resp_menu" class="resp_menu_box resp_menu_close dishesMenuesHbNavi">
-            <button onclick="toggleRespMenu()">X</button>
-            <div class="dishesMenue" onclick="renderDishesPizza()">
+    <div id="resp_menu" class="resp_menu_box resp_menu_close dishesMenuesHbNavi">
+        <button onclick="toggleRespMenu()">X</button>
+            <div class="dishesMenue" onclick="renderDishesNavi(dishesPizza)">
                 <div class="dishesMenueText"><img src="./assets/icons/navi/pizza.jpg"> Pizza</div>
             </div>
-            <div class="dishesMenue" onclick="renderDishesPasta()">
-                <div class="dishesMenueText"><img src="./assets/icons/navi/pasta.jpg"> Pasta</div>
+                <div class="dishesMenue" onclick="renderDishesNavi(dishesPasta)">
+                    <div class="dishesMenueText"><img src="./assets/icons/navi/pasta.jpg"> Pasta</div>
+                </div>
+                    <div class="dishesMenue" onclick="renderDishesNavi(dishesBurger)">
+                        <div class="dishesMenueText"><img src="./assets/icons/navi/burger.jpg"> Burger</div>
+                    </div>
+                        <div class="dishesMenue" onclick="renderDishesNavi(dishesSalat)">
+                            <div class="dishesMenueText"><img src="./assets/icons/navi/salat.jpg"> Salat</div>
+                        </div>
+                <div class="dishesMenue" onclick="renderDishesNavi(dishesDesserts)">
+                    <div class="dishesMenueText"><img src="./assets/icons/navi/dessert.jpeg"> Desserts</div>
+                </div>
+            <div class="dishesMenue" onclick="renderDishesNavi(dishesDrinks)">
+               <div class="dishesMenueText"><img src="./assets/icons/navi/drinks.jpeg"> Getränke</div>
             </div>
-            <div class="dishesMenue" onclick="renderDishesBurger()">
-                <div class="dishesMenueText"><img src="./assets/icons/navi/burger.jpg"> Burger</div>
-            </div>
-            <div class="dishesMenue" onclick="renderDishesSalat()">
-                <div class="dishesMenueText"><img src="./assets/icons/navi/salat.jpg"> Salat</div>
-            </div>
-            <div class="dishesMenue" onclick="renderDishesDesserts()">
-                <div class="dishesMenueText"><img src="./assets/icons/navi/dessert.jpeg"> Desserts</div>
-            </div>
-            <div class="dishesMenue" onclick="renderDishesDrinks()">
-                <div class="dishesMenueText"><img src="./assets/icons/navi/drinks.jpeg"> Getränke</div>
-                <hr>
-                <div class="footerTotal"><b>Impressum<br>Kontakt</b></div>
-        </div>
-
-    </header>
+        <hr><div class="footerTotal"><b>Impressum<br>Kontakt</b></div>
+    </div>
+</header>
     <section>
         <div class="contentMax">
             <div class="formatFrame">
@@ -64,45 +63,45 @@
                     <h1>Willkommen bei Spari`s Pizza & Co.</h1>
                     <p>Wir freuen uns, dass Sie sich für unsere Speisen interessieren. 
                         Wählen Sie aus unserem Angebot und bestellen Sie bequem online.</p>
-                </div>
-                    <div class="dishesMenuesNavi">
-                        <div class="dishesMenue" onclick="renderDishesPizza()">
-                            <img src="./assets/icons/navi/pizza.jpg">
-                            <div class="dishesMenueText">Pizza</div>
                         </div>
-                        <div class="dishesMenue" onclick="renderDishesPasta()">
-                            <img src="./assets/icons/navi/pasta.jpg">
-                            <div class="dishesMenueText">Pasta</div>
-                        </div>
-                        <div class="dishesMenue" onclick="renderDishesBurger()">
-                            <img src="./assets/icons/navi/burger.jpg">
-                            <div class="dishesMenueText">Burger</div>
-                        </div>
-                        <div class="dishesMenue" onclick="renderDishesSalat()">
-                            <img src="./assets/icons/navi/salat.jpg">
-                            <div class="dishesMenueText">Salat</div>
-                        </div>
-                        <div class="dishesMenue" onclick="renderDishesDesserts()">
-                            <img src="./assets/icons/navi/dessert.jpeg">
-                            <div class="dishesMenueText">Desserts</div>
-                        </div>
-                        <div class="dishesMenue" onclick="renderDishesDrinks()">
-                            <img src="./assets/icons/navi/drinks.jpeg">
-                            <div class="dishesMenueText">Getränke</div>
-                        </div></div>
+                            <div class="dishesMenuesNavi">
+                                <div class="dishesMenue" onclick="renderDishesNavi(dishesPizza)">
+                                    <img src="./assets/icons/navi/pizza.jpg">
+                                    <div class="dishesMenueText">Pizza</div>
+                                </div>
+                                    <div class="dishesMenue" onclick="renderDishesNavi(dishesPasta)">
+                                        <img src="./assets/icons/navi/pasta.jpg">
+                                        <div class="dishesMenueText">Pasta</div>
+                                    </div>
+                                        <div class="dishesMenue" onclick="renderDishesNavi(dishesBurger)">
+                                            <img src="./assets/icons/navi/burger.jpg">
+                                            <div class="dishesMenueText">Burger</div>
+                                        </div>
+                                        <div class="dishesMenue" onclick="renderDishesNavi(dishesSalat)">
+                                            <img src="./assets/icons/navi/salat.jpg">
+                                            <div class="dishesMenueText">Salat</div>
+                                        </div>
+                                    <div class="dishesMenue" onclick="renderDishesNavi(dishesDesserts)">
+                                        <img src="./assets/icons/navi/dessert.jpeg">
+                                        <div class="dishesMenueText">Desserts</div>
+                                    </div>
+                                <div class="dishesMenue" onclick="renderDishesNavi(dishesDrinks)">
+                                    <img src="./assets/icons/navi/drinks.jpeg">
+                                    <div class="dishesMenueText">Getränke</div>
+                                </div>
+                            </div>
         <div class="dishesMenues">              
             <div id="dishesFrame"></div>
                 <div class="basketFrame">
                     <div class="basket"><hr><b>Warenkorb</b><hr>
-                        <div id="basketRows"></div>
-                        <hr>
+                        <div id="basketRows"></div><hr>
                             <div class="basketTotal">
                                 <div class="basketSubtotalText">Zwischensumme:</div>
                                   <div id="basketSubtotalPrice"></div>
                                     <div id="deliveryCosts">zzgl. Lieferkosten: 2,50 €</div>
                                       <div id="deliveryCostsPrice"></div>
-                                        <div class="basketTotalText"><b>Gesamt:</b></div>
-                                          <div id="basketTotalPrice"></div>
+                                    <div class="basketTotalText"><b>Gesamt:</b></div>
+                                <div id="basketTotalPrice"></div>
                             </div>
                         </div>
                     </div>
@@ -110,18 +109,18 @@
             </div> 
         </div>
     </section>
-    <footer>
-        <div id="footer">
-            <div class="contentMax">
-                    <div id="footerBasket">
-                        <div id="footerBasketIcon"><br><img class="logo" src="./assets/icons/Logo.png"></div>
-                    </div>
-                    <div class="footerTotal">
-                        <div id="footerTotalText"><b>Impressum</b></div>
-                        <div id="footerTotalPrice">Kontakt</div>
-                    </div>
-            </div>
-        </div> 
-    </footer>   
+<footer>
+    <div id="footer">
+        <div class="contentMax">
+                <div id="footerBasket">
+                    <div id="footerBasketIcon"><br><img class="logo" src="./assets/icons/Logo.png"></div>
+                </div>
+                <div class="footerTotal">
+                    <div id="footerTotalText"><b>Impressum</b></div>
+                    <div id="footerTotalPrice">Kontakt</div>
+                </div>
+        </div>
+    </div> 
+</footer>   
 </body>
 </html>

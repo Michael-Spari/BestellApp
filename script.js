@@ -14,24 +14,18 @@ function renderDishes() {
 
 function addDish(id) {
   // Sucht das Gericht mit der ID
-  let dish = 0;
-  for (let i = 0; i < dishes.length; i++) {
-    if (dishes[i].id === id) {
-      dish = dishes[i];
-      break;
-    }
-  }
-
+  const dishIndex = dishes.findIndex(dish => dish.id === id);
+  const dish = dishes[dishIndex];
+    
+  // Prüfe, ob das Gericht bereits in der Anzeige des Warenkorbs existiert
+  const amountElement = document.getElementById(`amount-${id}`);
+  const priceElement = document.getElementById(`price-${id}`);
   // Falls Gericht gefunden wurde, Menge erhöhen
   if (dish) {
     dish.amount++;
     
-    // Prüfe, ob das Gericht bereits in der Anzeige des Warenkorbs existiert
-    const amountElement = document.getElementById(`amount-${id}`);
-    const priceElement = document.getElementById(`price-${id}`);
-    
+    // Aktualisiere die Menge und den Preis des vorhandenen Gerichts
     if (amountElement && priceElement) {
-      // Aktualisiere die Menge und den Preis des vorhandenen Gerichts
       amountElement.innerHTML = dish.amount;
       priceElement.innerHTML = (dish.amount * dish.price).toFixed(2).replace('.', ',') + ' €';
       renderBasket();
@@ -47,24 +41,18 @@ function addDish(id) {
 
 function removeDish(id) {
   // Sucht das Gericht mit der ID
-  let dish = 0;
-  for (let i = 0; i < dishes.length; i++) {
-    if (dishes[i].id === id) {
-      dish = dishes[i];
-      break;
-    }
-  }
-
-  // Falls Gericht gefunden wurde, Menge verringern
+  const dishIndex = dishes.findIndex(dish => dish.id === id);
+  const dish = dishes[dishIndex];
+    
+  // Prüfe, ob das Gericht bereits in der Anzeige des Warenkorbs existiert
+  const amountElement = document.getElementById(`amount-${id}`);
+  const priceElement = document.getElementById(`price-${id}`);
+    // Falls Gericht gefunden wurde, Menge verringern
   if (dish) {
     dish.amount--;
-    
-    // Prüfe, ob das Gericht bereits in der Anzeige des Warenkorbs existiert
-    const amountElement = document.getElementById(`amount-${id}`);
-    const priceElement = document.getElementById(`price-${id}`);
-    
+
+    // Aktualisiere die Menge und den Preis des vorhandenen Gerichts
     if (amountElement && priceElement) {
-      // Aktualisiere die Menge und den Preis des vorhandenen Gerichts
       amountElement.innerHTML = dish.amount;
       priceElement.innerHTML = (dish.amount * dish.price).toFixed(2).replace('.', ',') + ' €';
       renderBasket();
@@ -81,13 +69,8 @@ function removeDish(id) {
 
 function clearBasket(id) {
   // Sucht das Gericht mit der ID
-  let dish = 0;
-  for (let i = 0; i < dishes.length; i++) {
-    if (dishes[i].id === id) {
-      dish = dishes[i];
-      break;
-    }
-  }
+  const dishIndex = dishes.findIndex(dish => dish.id === id);
+  const dish = dishes[dishIndex];
 
   // Falls Gericht gefunden wurde, Menge auf 0 setzen
   if (dish) {
