@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./styles/standard.css">
     <link rel="stylesheet" href="./styles/dishesMenues.css">
     <link rel="stylesheet" href="./styles/resp_menu.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
     <script src="./jsons/db.js"></script>
     <script src="./jsons/pizza.js"></script>
     <script src="./jsons/pasta.js"></script>
@@ -27,11 +28,10 @@
 <header>
 <div class="contentMax">
         <div class="headerFrame">
-            <img class="logo" src="./assets/icons/Logo.png">
+            <img class="logo" onclick="renderDishesNavi(dishes)" src="./assets/icons/Logo.png">
             <a href="#" onclick="toggleRespMenu()"><img class="hMenue" src="./assets/icons/hMenue.png"></a>
         </div>
     </div>
-
     <div id="resp_menu" class="resp_menu_box resp_menu_close dishesMenuesHbNavi">
         <button onclick="toggleRespMenu()">X</button>
             <div class="dishesMenue" onclick="renderDishesNavi(dishesPizza)">
@@ -93,7 +93,7 @@
         <div class="dishesMenues">              
             <div id="dishesFrame"></div>
                 <div class="basketFrame">
-                    <div class="basket"><hr><b>Warenkorb</b><hr>
+                    <div class="basket"><div class="basketHeader"><hr><b>Warenkorb</b><hr></div>
                         <div id="basketRows"></div><hr>
                             <div class="basketTotal">
                                 <div class="basketSubtotalText">Zwischensumme:</div>

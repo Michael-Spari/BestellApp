@@ -17,4 +17,5 @@
 }
 .resp_menu_close {
     transform: translateX(105%);
+    display: none;
 }

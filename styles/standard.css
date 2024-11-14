@@ -17,14 +17,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-.buttonField{
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    margin-top: 20px;
-    height: 100%;
-    width: 40%;
-}
 .addIcon{
     width: 15px;
     height: 15px;
@@ -63,4 +55,16 @@ body {
     cursor: pointer;
     box-shadow: 0 0 10px #f1701a;
     border: 1px solid #f1701a;
+}
+button{
+    background-color: #f1701a;
+    width: 90%;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }

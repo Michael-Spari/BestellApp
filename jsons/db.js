@@ -238,6 +238,5 @@ let dishes =[
         "description": "mit Zucker, Orangensaft, Kohlensäure",
         "amount": 0,
         "image": "./assets/img/orangensaft.jpg",
-    }
-   
+    }   
 ]

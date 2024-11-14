@@ -33,9 +33,27 @@ hr {
     width: 100px;
     padding-left: 10px;
 }
+.logo:hover{
+    cursor: pointer;
+}
 .hMenue{
+    display: none;
     width: 50px;
     padding-right: 10px;
+}
+.hMenue:hover{
+    cursor: pointer;
+    animation: wobble 1
+    s infinite;
+}
+
+@keyframes wobble {
+    0%, 100% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
 }
 .formatFrame{
     display: flex;
@@ -61,6 +79,19 @@ hr {
     padding-top: 10px;
     background-color: #f1701a;
 }
+.basketHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-radius: 10px;
+    background-color: #f1701a;
+}
 .basket{
     background-color: rgb(252, 233, 210);
     overflow-y: auto;
@@ -82,7 +113,6 @@ hr {
     justify-content: space-around;
     align-items: center;
     background-color: rgb(252, 233, 210);
-    /* border: #f1701a 1px solid; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     margin-top: 20px;
@@ -103,6 +133,14 @@ hr {
     border-radius: 10px;
     object-fit: cover;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.buttonField{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-top: 20px;
+    height: 100%;
+    width: 40%;
 }
 footer{
     width: 100%;
