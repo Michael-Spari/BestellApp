@@ -41,20 +41,6 @@ hr {
     width: 50px;
     padding-right: 10px;
 }
-.hMenue:hover{
-    cursor: pointer;
-    animation: wobble 1
-    s infinite;
-}
-
-@keyframes wobble {
-    0%, 100% {
-        transform: rotate(-5deg);
-    }
-    50% {
-        transform: rotate(5deg);
-    }
-}
 .formatFrame{
     display: flex;
     flex-direction: column;
@@ -109,8 +95,7 @@ hr {
 }
 .dishesField{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: rgb(252, 233, 210);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -128,19 +113,18 @@ hr {
     border-radius: 10px;
 }
 .imageField img{
+    margin-right: 10px;
     width: 150px;
     height: 150px;
     border-radius: 10px;
     object-fit: cover;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-.buttonField{
+.buttonField1{
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: flex-start;
     margin-top: 20px;
-    height: 100%;
-    width: 40%;
 }
 footer{
     width: 100%;
