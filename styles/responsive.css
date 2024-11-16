@@ -2,6 +2,9 @@
     .dishesMenuesNavi{
         display: none;
     }
+    .basketClose{
+        display: flex;
+    }
     .hMenue{
         display: flex;
         width: 50px;
