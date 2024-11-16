@@ -6,7 +6,7 @@ function dishesTemplate(dish) {
           <div class="descriptionField"><h2>${dish.name}</h2><p>${dish.description}</p></div>
             <p>${dish.price.toFixed(2).replace('.', ',')} €</p>
             <div class="buttonField">
-          <img onclick="addDish(${dish.id})" class="addIcon" src="./assets/icons/button_add.jpg">
+          <img onclick="addDish(${dish.id})" class="addIconMax" src="./assets/icons/button_add.jpg">
         </div>
       </div>
     </div>`;

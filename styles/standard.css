@@ -25,6 +25,19 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.4);
     border-radius: 5px;
 }
+.addIconMax{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+.addIconMax:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px #f1701a;
+    border: 1px solid #f1701a;
+}
 .addIcon:hover{
     cursor: pointer;
     box-shadow: 0 0 10px #f1701a;
@@ -66,5 +79,8 @@ button{
     border-radius: 5px;
     padding: 5px;
     margin-left: 10px;
+    box-shadow: 0 0 10px white;
+}
+button:hover{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }

@@ -1,4 +1,4 @@
-@media(max-width: 920px){
+@media(max-width: 960px){
     .dishesMenuesNavi{
         display: none;
     }
@@ -19,10 +19,10 @@
             transform: rotate(5deg);
         }
     }
-    .dishesMenues {
+    /* .dishesMenues {
         flex-direction: column;
         align-items: center;
-    }
+    } */
     #dishesFrame{
         width: 100%;
     }
@@ -39,23 +39,52 @@
         padding: 20px;
         width: 100%;
     }
-    .basketFrame{
+    .basketIcon{
         display: flex;
+        position: sticky;
+        cursor: pointer;
+        left: 20px;
+        top: 20px;
+        width: 50px;
+        padding-right: 10px;
+        padding-left: 10px;
+        background-color: #f1701a;
+    }
+    .basketIcon:hover{
+        animation: wobble 1s infinite;
+    }
+    .basketFrame{
         justify-content: center;
         flex-grow: unset;
         width: 100%;
         position: fixed;
         bottom: 0px;
+        left: 0px;
         padding-top: 10px;
         padding-bottom: 10px;
         background-color: #f1701a;
     }
+    .basket_menu_box {
+        background-color: #f1701a;
+        display: flex;
+        align-items: flex-start;
+        top:0;
+        right:0;
+        width: 60%;
+        height: 100%;
+        transition: all 250ms ease-in-out;
+        filter: drop-shadow(-3px 3px 5px rgb(37, 37, 37));
+    }
+    .basket_menu_close {
+        transform: translateX(105%);
+        display: none;
+    }
     .basket{
-        height: 150px;
+        height: 400px;
     }
   }
 
-  @media(max-width: 630px){
+  @media(max-width: 715px){
     .imageField img{
         width: 100%;
         height: 300px;
@@ -76,9 +105,32 @@
         width: 100%;
     }
     .basket{
-        height: 150px;
+        height: 300px;
     }
-    
+    .basketIcon{
+        width: 40px;
+    }
+    .addIconMax{
+        width: 20px;
+        height: 20px;
+        margin-left: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        border-radius: 5px;
+    }
+    .addIconMax:hover{
+        cursor: pointer;
+        box-shadow: 0 0 10px #f1701a;
+        border: 1px solid #f1701a;
+    }    
+  }
+  @media(max-width: 500px){
+    .imageField img{
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }  
   }
   @media(max-width: 380px){
     .imageField img{
@@ -87,18 +139,10 @@
         object-fit: cover;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
-    .dishesField{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: flex-start;
-        background-color: rgb(252, 233, 210);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        border-radius: 10px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        padding: 20px;
-        width: 100%;
+    .basketIcon{
+        width: 30px;
     }
-    
+    h2{
+        font-size: 16px;
+    }   
   }

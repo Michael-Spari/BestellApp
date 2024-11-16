@@ -41,6 +41,9 @@ hr {
     width: 50px;
     padding-right: 10px;
 }
+.basketIcon{
+    display: none;
+}
 .formatFrame{
     display: flex;
     flex-direction: column;

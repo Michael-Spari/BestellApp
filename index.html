@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./styles/dishesMenues.css">
     <link rel="stylesheet" href="./styles/resp_menu.css">
     <link rel="stylesheet" href="./styles/responsive.css">
+    <link rel="stylesheet" href="./styles/basket_menu.css">
     <script src="./jsons/db.js"></script>
     <script src="./jsons/pizza.js"></script>
     <script src="./jsons/pasta.js"></script>
@@ -20,6 +21,7 @@
     <script src="./jsons/dessert.js"></script>
     <script src="./jsons/drinks.js"></script>
     <script src="./scripts/resp_menu.js"></script>
+    <script src="./scripts/basket_menu.js"></script>
     <script src="./scripts/template.js"></script>
     <script src="./scripts/renderDishesNavi.js"></script>
     <script src="./script.js"></script>
@@ -91,9 +93,9 @@
                         <div class="dishesMenueText">Getränke</div>
                     </div>
                 </div>
-        <div class="dishesMenues">              
-            <div id="dishesFrame"></div>
-                <div class="basketFrame">
+        <div class="dishesMenues">                 
+            <div id="dishesFrame"></div><div class="basketIconFrame"><img onclick="toggleBasketMenu()" class="basketIcon" src="./assets/icons/basket.png"></div> 
+                <div id="basket_menu" class="basket_menu_box basket_menu_close basketFrame">
                     <div class="basket"><div class="basketHeader"><hr><b>Warenkorb</b><hr></div>
                         <div id="basketRows"></div><hr>
                             <div class="basketTotal">
@@ -102,7 +104,8 @@
                                     <div id="deliveryCosts">zzgl. Lieferkosten: 2,50 €</div>
                                       <div id="deliveryCostsPrice"></div>
                                     <div class="basketTotalText"><b>Gesamt:</b></div>
-                                <div id="basketTotalPrice"></div>
+                                <div id="basketTotalPrice"></div><hr><button onclick="window.location.href='order.html'">Bestellen</button><br><br>
+                            </div>
                             </div>
                         </div>
                     </div>
