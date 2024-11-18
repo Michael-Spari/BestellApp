@@ -13,10 +13,10 @@ function renderDishes() {
 }
 
 function addDish(id) {
-  const dishIndex = dishes.findIndex(dish => dish.id === id);
-  const dish = dishes[dishIndex];
+  const dish = dishes.find(dish => dish.id === id);
   const amountElement = document.getElementById(`amount-${id}`);
   const priceElement = document.getElementById(`price-${id}`);
+  
   if (dish) {
     dish.amount++;
     
@@ -24,7 +24,7 @@ function addDish(id) {
       amountElement.innerHTML = dish.amount;
       priceElement.innerHTML = (dish.amount * dish.price).toFixed(2).replace('.', ',') + ' €';
       renderBasket();
-      
+
     } else {
       const basketRowsContainer = document.getElementById('basketRows');
       basketRowsContainer.innerHTML += basketRowsTemplate(dish);
@@ -34,10 +34,10 @@ function addDish(id) {
 }
 
 function removeDish(id) {
-  const dishIndex = dishes.findIndex(dish => dish.id === id);
-  const dish = dishes[dishIndex];
+  const dish = dishes.find(dish => dish.id === id);
   const amountElement = document.getElementById(`amount-${id}`);
   const priceElement = document.getElementById(`price-${id}`);
+  
   if (dish) {
     dish.amount--;
 
@@ -48,7 +48,10 @@ function removeDish(id) {
       
       if (dish.amount === 0) {
         const basketRow = document.getElementById(`row-${id}`);
-        basketRow.remove();
+        
+        if (basketRow) {
+          basketRow.remove();
+        }
         renderBasket();
       }
     }
@@ -56,8 +59,7 @@ function removeDish(id) {
 }
 
 function clearBasket(id) {
-  const dishIndex = dishes.findIndex(dish => dish.id === id);
-  const dish = dishes[dishIndex];
+  const dish = dishes.find(dish => dish.id === id);
 
   if (dish) {
     dish.amount = 0;
